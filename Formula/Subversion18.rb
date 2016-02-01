@@ -3,18 +3,12 @@ class Subversion18 < Formula
   homepage "https://subversion.apache.org/"
   url "https://archive.apache.org/dist/subversion/subversion-1.8.15.tar.bz2"
   sha256 "cf98a1f7686cfd6a15cbcde8379f15730fd5e00a3573cdb035a6491dbcccc82c"
-  version "1.8.15"
 
   option :universal
   option "with-java", "Build Java bindings"
   option "with-perl", "Build Perl bindings"
   option "with-ruby", "Build Ruby bindings"
   option "with-gpg-agent", "Build with support for GPG Agent"
-
-  resource "serf" do
-    url "https://serf.googlecode.com/svn/src_releases/serf-1.3.8.tar.bz2", :using => :curl
-    sha256 "e0500be065dbbce490449837bb2ab624e46d64fc0b090474d9acaa87c82b2590"
-  end
 
   depends_on "pkg-config" => :build
   depends_on :apr => :build
@@ -33,6 +27,11 @@ class Subversion18 < Formula
   # Other optional dependencies
   depends_on "gpg-agent" => :optional
   depends_on :java => :optional
+
+  resource "serf" do
+    url "https://serf.googlecode.com/svn/src_releases/serf-1.3.8.tar.bz2", :using => :curl
+    sha256 "e0500be065dbbce490449837bb2ab624e46d64fc0b090474d9acaa87c82b2590"
+  end
 
   # Fix #23993 by stripping flags swig can't handle from SWIG_CPPFLAGS
   # Prevent "-arch ppc" from being pulled in from Perl's $Config{ccflags}
