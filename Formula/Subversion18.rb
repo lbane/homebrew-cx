@@ -1,8 +1,3 @@
-  url "http://archive.apache.org/dist/subversion/subversion-1.8.15.tar.bz2"
-  version "1.8.15"
-  sha256 "cf98a1f7686cfd6a15cbcde8379f15730fd5e00a3573cdb035a6491dbcccc82c"
-
-
 class Subversion18 < Formula
   desc "Version control system designed to be a better CVS"
   homepage "https://subversion.apache.org/"
