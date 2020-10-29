@@ -18,7 +18,8 @@ class SubversionAT10 < Formula
     depends_on "gettext" => :build
   end
 
-  depends_on "adoptopenjdk11" => :build
+  #depending on casks?
+  #depends_on "adoptopenjdk8" => :build
   depends_on "pkg-config" => :build
   depends_on "python@3.9" => :build
   depends_on "scons" => :build # For Serf
@@ -94,7 +95,7 @@ class SubversionAT10 < Formula
       --with-apr-util=#{Formula["apr-util"].opt_prefix}
       --with-apr=#{Formula["apr"].opt_prefix}
       --with-apxs=no
-      --with-jdk=/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home
+      --with-jdk=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
       --with-ruby-sitedir=#{lib}/ruby
       --with-py3c=#{py3c_prefix}
       --with-serf=#{serf_prefix}
