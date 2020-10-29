@@ -1,4 +1,4 @@
-class Subversion < Formula
+class SubversionAT10 < Formula
   desc "Version control system designed to be a better CVS"
   homepage "https://subversion.apache.org/"
   url "https://artfiles.org/apache.org/subversion/subversion-1.10.6.tar.bz2"
